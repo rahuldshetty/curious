@@ -15,14 +15,13 @@ class ResultTitle extends StatelessWidget {
     if(phonetic.audio==""){
       return IconButton(
         icon: const Icon(Icons.volume_mute, color: Colors.white),
-        onPressed: ()=>print('hello ' + phonetic.audio),
+        onPressed: ()=>{},
       );
     }
     else {
       return IconButton(
         icon: const Icon(Icons.volume_up, color: Colors.white),
         onPressed: ()=>{
-          print(phonetic.audio),
           player.play(phonetic.audio, isLocal:false)
         },
       );
@@ -86,7 +85,7 @@ class ResultTitle extends StatelessWidget {
               children: [
                 ListTile(
                   title: Padding(
-                    padding: const EdgeInsets.all(14),
+                    padding: const EdgeInsets.fromLTRB(14,14,0,0),
                     child: Text(
                       (result?.word).capitalize!,
                       style: const TextStyle(

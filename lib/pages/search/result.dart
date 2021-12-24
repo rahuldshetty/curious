@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:curious/pages/search/search_tab.dart';
 import 'package:flutter/material.dart';
 
 import "./result_api.dart";
@@ -52,7 +53,10 @@ class ResultState extends State<Result>{
               future: searchWordAPI(widget.keyword),
               builder: (BuildContext ctx, AsyncSnapshot<SearchResult> snapshot) {
                   if(snapshot.hasData){
-                    return ResultTitle(snapshot.data);
+                    return Column(children: [
+                      ResultTitle(snapshot.data),
+                      SearchTab(snapshot.data)
+                    ]);
                   } 
                   else if (snapshot.hasError){
                     return Flexible(
