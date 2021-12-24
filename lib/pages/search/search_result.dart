@@ -56,6 +56,7 @@ class SearchResult {
     if (_phonetics != null) {
       data['phonetics'] = _phonetics.map((v) => v.toJson()).toList();
     }
+
     data['origin'] = _origin;
     if (_meanings != null) {
       data['meanings'] = _meanings.map((v) => v.toJson()).toList();
@@ -79,11 +80,18 @@ class Phonetics {
   set audio(String audio) => _audio = audio;
 
   Phonetics.fromJson(Map<String, dynamic> json) {
+    _text = "";
+    _audio = "";
     if(json['text'] != null){
       _text = json['text'];
     }
     if(json['audio'] != null){
       _audio = json['audio'];
+    }
+    
+    // Preprocess audio http links
+    if(_audio!="" && _audio.startsWith("//")){
+      _audio="https://"+_audio.substring(2);
     }
   }
 
@@ -156,6 +164,8 @@ class Definitions {
   set antonyms(List<String> antonyms) => _antonyms = antonyms;
 
   Definitions.fromJson(Map<String, dynamic> json) {
+    _definition="";
+    _example="";
     if(json['definition'] != null){
       _definition = json['definition'];
     }

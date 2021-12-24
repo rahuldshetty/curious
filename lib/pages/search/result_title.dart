@@ -2,10 +2,32 @@ import 'package:curious/pages/search/search_result.dart';
 import "package:flutter/material.dart";
 import 'package:string_extensions/string_extensions.dart';
 
+import 'package:audioplayers/audioplayers.dart';
+
+
 class ResultTitle extends StatelessWidget {
   final SearchResult? result;
+  final player = AudioPlayer();
 
-  const ResultTitle(this.result, {Key? key}) : super(key: key);
+  ResultTitle(this.result, {Key? key}) : super(key: key);
+
+  Widget audioTrack(Phonetics phonetic){
+    if(phonetic.audio==""){
+      return IconButton(
+        icon: const Icon(Icons.volume_mute, color: Colors.white),
+        onPressed: ()=>print('hello ' + phonetic.audio),
+      );
+    }
+    else {
+      return IconButton(
+        icon: const Icon(Icons.volume_up, color: Colors.white),
+        onPressed: ()=>{
+          print(phonetic.audio),
+          player.play(phonetic.audio, isLocal:false)
+        },
+      );
+    }
+  }
 
   Widget buildPhoneticList(){
     List<Widget> phoneticList = []; 
@@ -13,7 +35,7 @@ class ResultTitle extends StatelessWidget {
       for (var phonetic in result!.phonetics) { 
         phoneticList.add(Container(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(28, 0, 0, 28),
+            padding: const EdgeInsets.fromLTRB(28, 0, 0, 0),
             child: Row(
               children: [
                 Text(
@@ -23,10 +45,7 @@ class ResultTitle extends StatelessWidget {
                     fontSize: 21
                   ),
                 ),
-                IconButton(
-                  icon: const Icon(Icons.audiotrack_sharp, color: Colors.white),
-                  onPressed: ()=>print('hello'),
-                )
+                audioTrack(phonetic)
               ] 
             )
           )
