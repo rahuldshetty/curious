@@ -27,11 +27,11 @@ class SearchTab extends StatelessWidget {
                 labelColor: Colors.black,
                 unselectedLabelColor: const Color.fromARGB(255, 160, 160, 160),
                 labelStyle: const TextStyle(
-                  fontSize: 28,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold
                 ),
                 unselectedLabelStyle: const TextStyle(
-                  fontSize: 21,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold
                 ),
                 onTap: (int index){
