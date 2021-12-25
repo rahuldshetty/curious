@@ -17,7 +17,23 @@ class Result extends StatefulWidget{
   ResultState createState() => ResultState();
 }
 
-class ResultState extends State<Result>{
+class ResultState extends State<Result> with TickerProviderStateMixin{
+  late TabController tabController;
+  late int selectIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController=TabController(length: 3, vsync: this);
+    selectIndex = 0;
+  }
+
+  @override
+  void dispose() {
+    tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +71,7 @@ class ResultState extends State<Result>{
                   if(snapshot.hasData){
                     return Column(children: [
                       ResultTitle(snapshot.data),
-                      SearchTab(snapshot.data)
+                      SearchTab(selectIndex, tabController, snapshot.data)
                     ]);
                   } 
                   else if (snapshot.hasError){
