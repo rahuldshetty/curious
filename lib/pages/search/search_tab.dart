@@ -1,3 +1,4 @@
+import 'package:curious/pages/search/definitions.dart';
 import 'package:curious/pages/search/search_result.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,7 @@ class SearchTab extends StatelessWidget {
                 index: selectIndex,
                 children: [
                   Visibility(
-                    child: Icon(Icons.flight, size: 350),
+                    child: DefinitionPage(result?.meanings),
                     visible: selectIndex==0
                   ),
                   Visibility(
