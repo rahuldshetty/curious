@@ -24,7 +24,8 @@ class ResultState extends State<Result> with TickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
-    tabController=TabController(length: 3, vsync: this);
+    // Number of tabs in search page - Definition, Origin, Synonym, Antonym
+    tabController=TabController(length: 4, vsync: this);
     selectIndex = 0;
   }
 

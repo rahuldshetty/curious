@@ -39,7 +39,11 @@ class SearchResult {
       });
     }
 
-    _origin = json['origin'];
+    _origin="";
+    if(json['origin'] != null){
+      _origin = json['origin'];
+    }
+
     if (json['meanings'] != null) {
       _meanings = <Meanings>[];
       json['meanings'].forEach((v) {

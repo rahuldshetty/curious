@@ -1,4 +1,5 @@
 import 'package:curious/pages/search/definitions.dart';
+import 'package:curious/pages/search/origin.dart';
 import 'package:curious/pages/search/search_result.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class SearchTab extends StatelessWidget {
                 ),
                 tabs: const [
                   Tab(text: 'Definition'),
+                  Tab(text: 'Origin'),
                   Tab(text: 'Synonym'),
                   Tab(text: 'Antonym'),
                 ],
@@ -49,12 +51,16 @@ class SearchTab extends StatelessWidget {
                     visible: selectIndex==0
                   ),
                   Visibility(
-                    child: Icon(Icons.directions_transit, size: 350),
+                    child: OriginsPage(result?.origin),
                     visible: selectIndex==1
                   ),
                   Visibility(
-                    child: Icon(Icons.directions_car, size: 350),
+                    child: Icon(Icons.directions_transit, size: 350),
                     visible: selectIndex==2
+                  ),
+                  Visibility(
+                    child: Icon(Icons.directions_car, size: 350),
+                    visible: selectIndex==3
                   )
                 ]
               )
