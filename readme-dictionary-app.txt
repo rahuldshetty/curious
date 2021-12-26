@@ -17,15 +17,15 @@ https://dictionaryapi.dev
 
 
 Features:
-1. Search word meaning.
-> Word Origin
-> Meaning
-> Audio
-> Phonetic
-> POS
+1. Search word meaning.*
+> Word Origin*
+> Meaning*
+> Audio*
+> Phonetic*
+> POS*
 > Synonyms
 > Antonyms
-> Example 
+> Example* 
 > Picture
 > Meme 
 > Similar word if not found.
@@ -34,3 +34,4 @@ Features:
 
 3. Random word of the day.
 
+* - Feature implemented in App
