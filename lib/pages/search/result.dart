@@ -17,7 +17,7 @@ class Result extends StatefulWidget{
   ResultState createState() => ResultState();
 }
 
-class ResultState extends State<Result> with TickerProviderStateMixin{
+class ResultState extends State<Result> with TickerProviderStateMixin {
   late TabController tabController;
   late int selectIndex;
 

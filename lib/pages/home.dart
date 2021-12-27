@@ -14,7 +14,7 @@ class HomePageState extends State<HomePage>{
   void searchKeyword(String keyword, BuildContext ctx){
     Navigator.push(
       ctx,
-      MaterialPageRoute(builder: (ctx)=>Result(keyword))
+      MaterialPageRoute(builder: (ctx)=>Result(keyword), maintainState:true)
     );
   }
 

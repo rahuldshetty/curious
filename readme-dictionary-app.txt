@@ -23,8 +23,8 @@ Features:
 > Audio*
 > Phonetic*
 > POS*
-> Synonyms * (need to fix issue with returning back to screen changing selectedTab)
-> Antonyms
+> Synonyms *
+> Antonyms *
 > Example* 
 > Picture
 > Meme 
@@ -34,6 +34,9 @@ Features:
 
 3. Random word of the day.
 
-
-
 * - Feature implemented in App
+
+To Fix:
+1. need to fix issue with returning back to screen changing selectedTab
+2. Empty State handler for Origins, Synonyms, Antonyms
+3. 

@@ -3,22 +3,22 @@ import 'package:curious/pages/search/search_result.dart';
 import "package:flutter/material.dart";
 import "package:string_extensions/string_extensions.dart";
 
-class SynonymsPage extends StatelessWidget {
+class AntonymsPage extends StatelessWidget {
   final List<Meanings>? meanings;
 
-  const SynonymsPage(this.meanings, {Key? key}) : super(key: key);
+  const AntonymsPage(this.meanings, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> synonymList=[];
+    List<Widget> antonymList=[];
 
     for(int i=0;i<meanings!.length;i++){
       List<Definitions> definitions = meanings![i].definitions;
       for(int j=0;j<definitions.length;j++){
         
-        List<String> synonyms = meanings![i].definitions[j].synonyms;
+        List<String> synonyms = meanings![i].definitions[j].antonyms;
         for (String synonym in synonyms) {
-          synonymList.add(
+          antonymList.add(
             Card(
             elevation: 2,
             child: InkWell( 
@@ -52,7 +52,7 @@ class SynonymsPage extends StatelessWidget {
     }
 
      return Column(
-      children: synonymList
+      children: antonymList
     );
   }
 }

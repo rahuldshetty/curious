@@ -1,3 +1,4 @@
+import 'package:curious/pages/search/antonyms.dart';
 import 'package:curious/pages/search/definitions.dart';
 import 'package:curious/pages/search/origin.dart';
 import 'package:curious/pages/search/search_result.dart';
@@ -60,7 +61,7 @@ class SearchTab extends StatelessWidget {
                     visible: selectIndex==2
                   ),
                   Visibility(
-                    child: Icon(Icons.directions_car, size: 350),
+                    child: AntonymsPage(result?.meanings),
                     visible: selectIndex==3
                   )
                 ]
