@@ -1,6 +1,7 @@
 import 'package:curious/pages/search/definitions.dart';
 import 'package:curious/pages/search/origin.dart';
 import 'package:curious/pages/search/search_result.dart';
+import 'package:curious/pages/search/synonyms.dart';
 import 'package:flutter/material.dart';
 
 class SearchTab extends StatelessWidget {
@@ -55,7 +56,7 @@ class SearchTab extends StatelessWidget {
                     visible: selectIndex==1
                   ),
                   Visibility(
-                    child: Icon(Icons.directions_transit, size: 350),
+                    child: SynonymsPage(result?.meanings),
                     visible: selectIndex==2
                   ),
                   Visibility(

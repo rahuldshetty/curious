@@ -21,7 +21,7 @@ class OriginsPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(7),
               child:ListTile(
-              subtitle: Padding(
+              title: Padding(
                 padding: const EdgeInsets.all(4),
                 child: Text(
                 origin!.capitalize!,

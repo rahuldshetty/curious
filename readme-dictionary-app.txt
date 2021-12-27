@@ -23,7 +23,7 @@ Features:
 > Audio*
 > Phonetic*
 > POS*
-> Synonyms
+> Synonyms * (need to fix issue with returning back to screen changing selectedTab)
 > Antonyms
 > Example* 
 > Picture
@@ -33,5 +33,7 @@ Features:
 2. History of searched words.
 
 3. Random word of the day.
+
+
 
 * - Feature implemented in App
