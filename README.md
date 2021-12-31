@@ -1,6 +1,25 @@
-# curious
+# Curious: English Dictionary
 
-A new Flutter project.
+Curious: English dictionary app built with Flutter & Free Dictionary API.
+
+This is a one-stop app for English language reference, education, and vocabulary building.
+Application is completely free & doesn't contain any advertisements.
+
+Users are welcome to raise new feature requests/issues for this application in Github: https://github.com/rahuldshetty/curious
+
+Features:
+* Word Origin: Know how a word came into existence.
+* Thesaurus: Synonyms & Antonyms are included with the dictionary.
+* Examples: Understand how a word is used in a sentence.
+* Audio Pronunciations: You can listen to word pronunciation(s).
+
+## Screenshots
+
+![Home](/screenshots/mobile/0.png)
+![Definition](/screenshots/mobile/1.png)
+![Origin](/screenshots/mobile/2.png)
+![Synonyms](/screenshots/mobile/3.png)
+![Antonyms](/screenshots/mobile/4.png)
 
 ## Getting Started
 

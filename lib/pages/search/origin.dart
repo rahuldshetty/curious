@@ -35,6 +35,22 @@ class OriginsPage extends StatelessWidget {
       );
     }
 
+    if(originList.isEmpty){
+      return  Column(children: const [
+        Image(
+          image: AssetImage('assets/missing.png'),
+          width: 300,
+          height: 300,  
+        ),
+        Padding(
+          padding: EdgeInsets.all(7),
+          child: Text(
+          'Origin details not found!'
+        )  
+        )
+      ]);
+    }
+
     return Column(
       children: originList
     );

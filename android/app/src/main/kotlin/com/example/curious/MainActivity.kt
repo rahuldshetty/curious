@@ -1,4 +1,4 @@
-package com.example.curious
+package com.rdshetty.curious
 
 import io.flutter.embedding.android.FlutterActivity
 

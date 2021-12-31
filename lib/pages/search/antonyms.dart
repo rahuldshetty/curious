@@ -51,6 +51,22 @@ class AntonymsPage extends StatelessWidget {
       }
     }
 
+    if(antonymList.isEmpty){
+      return  Column(children: const [
+        Image(
+          image: AssetImage('assets/missing.png'),
+          width: 300,
+          height: 300,  
+        ),
+        Padding(
+          padding: EdgeInsets.all(7),
+          child: Text(
+          'Antonyms not found!'
+        )  
+        )
+      ]);
+    }
+
      return Column(
       children: antonymList
     );
