@@ -14,12 +14,9 @@ Features:
 * Audio Pronunciations: You can listen to word pronunciation(s).
 
 ## Screenshots
-
-![Home](/screenshots/mobile/0.png)
-![Definition](/screenshots/mobile/1.png)
-![Origin](/screenshots/mobile/2.png)
-![Synonyms](/screenshots/mobile/3.png)
-![Antonyms](/screenshots/mobile/4.png)
+<div>
+<img src='/screenshots/mobile/0.png' width='256'> <img src='/screenshots/mobile/1.png' width='256'> <img src='/screenshots/mobile/2.png' width='256'> <img src='/screenshots/mobile/3.png' width='256'> <img src='/screenshots/mobile/4.png' width='256'>
+</div>
 
 ## Getting Started
 
